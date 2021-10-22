@@ -9,9 +9,11 @@ install:
   networks:
     harvester-mgmt:    # The management bond name. This is mandatory.
       interfaces:
-      - name: eno1
+      - name: eth0
       default_route: true
       method: dhcp
   device: /dev/sda
   iso_url: https://releases.rancher.com/harvester/v0.3.0/harvester-v0.3.0-amd64.iso
   tty: ttyS1,115200n8
+  vip: 145.40.93.179       # The VIP to access the Harvester GUI. Make sure the IP is free to use.
+  vip_mode: static
