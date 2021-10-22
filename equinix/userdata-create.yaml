@@ -9,7 +9,7 @@ install:
   networks:
     harvester-mgmt:    # The management bond name. This is mandatory.
       interfaces:
-      - name: eth0
+      - name: eno1
       default_route: true
       method: dhcp
   device: /dev/sda
